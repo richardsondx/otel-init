@@ -1,0 +1,56 @@
+{
+  "author": "Richardson Dackam",
+  "dependencies": {
+    "@opentelemetry/api": "^1.9.1",
+    "@opentelemetry/auto-instrumentations-node": "^0.81.0",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.223.0",
+    "@opentelemetry/instrumentation-fastify": "^0.43.0",
+    "@opentelemetry/resources": "^2.12.0",
+    "@opentelemetry/sdk-node": "^0.223.0",
+    "@opentelemetry/sdk-trace-node": "^2.12.0",
+    "@opentelemetry/semantic-conventions": "^1.43.0"
+  },
+  "description": "OpenTelemetry in one import. No, really. Zero-config SDK bootstrap with a pretty dev waterfall and OTLP in prod.",
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vitest": "^2.1.9"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "opentelemetry",
+    "otel",
+    "tracing",
+    "observability",
+    "instrumentation",
+    "zero-config"
+  ],
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "name": "otel-init",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardsondx/otel-init.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "version": "0.1.0"
+}
